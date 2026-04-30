@@ -55,3 +55,25 @@ class Servicio(ABC):
     @abstractmethod
     def calcular_costo(self):
         pass
+
+
+    # =========================
+# SERVICIOS
+# =========================
+class ServicioSala(Servicio):
+    def calcular_costo(self):
+        return 50000
+
+class ServicioEquipo(Servicio):
+    def calcular_costo(self):
+        return 30000
+
+class ServicioAsesoria(Servicio):
+    def calcular_costo(self):
+        return 80000
+
+
+# PRUEBA
+if __name__ == "__main__":
+    s1 = ServicioSala("Sala")
+    print("Costo sala:", s1.calcular_costo())
